@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relativeLayoutActivitymain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.solprob.yadierq87.consumidores.MainActivity"
+    tools:layout_editor_absoluteY="8dp"
+    tools:layout_editor_absoluteX="8dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutActivitymain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/inicio"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_go_iniciosesion"
+            style="@style/botonBlue"
+            android:layout_weight="1.00"
+            android:onClick="onClickIntentPantallaInicio"
+            android:text="@string/iniciar_sesion" />
+
+        <Button
+            android:id="@+id/btn_go_crearcuenta"
+            style="@style/botonBlue"
+            android:layout_weight="1.00"
+            android:onClick="onClickIntentCrearCuenta"
+            android:text="@string/crear_cuenta" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

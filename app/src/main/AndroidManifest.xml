@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.solprob.yadierq87.consumidores">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_default"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_default"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.keyes.youtube.OpenYouTubePlayerActivity"></activity>
+
+        <activity android:name=".Recomendar_publicaciones" />
+        <activity
+            android:name=".Principal_menu"
+            android:label="@string/title_activity_principal_menu"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.solprob.yadierq87.consumidores.MainActivity" />
+        </activity>
+        <activity android:name=".Reglas_premios_edicion" />
+        <activity
+            android:name=".menu_parent_principal.Pt3_Crear_cuenta_usuarios"
+            android:label="@string/title_activity_crear_cuenta_usuarios"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.solprob.yadierq87.consumidores.MainActivity" />
+        </activity>
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt10_programar_consumo_diario"
+            android:label="@string/title_activity_programar_consumo_diario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".vistas_mapas.MapsBuscador_direcciones"
+            android:label="@string/title_activity_maps_buscador_direcciones">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt10_programar_consumo_diario" />
+        </activity>
+        <activity
+            android:name=".vistas_mapas.Buscador_direcciones_maps"
+            android:label="@string/title_activity_buscador_direcciones_maps" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt14_video_pqherramientas_digitales"
+            android:label="@string/title_activity_video_pqherramientas_digitales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt15_programar_consumo_DVD"
+            android:label="@string/title_activity_programar_consumo_dvd"
+            android:parentActivityName=".pantallas_mensajes.Msg_pt14_video_pqherramientas_digitales"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt14_video_pqherramientas_digitales" />
+        </activity>
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt16_detalle_de_Servicios"
+            android:label="@string/title_activity_detalle_de__servicios"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt17_video_pago_pim"
+            android:label="@string/title_activity_video_pago_pim"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt18_confirmar_pago_pim"
+            android:label="@string/title_activity_confirmar_pago_pim"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Olvide_mi_password"
+            android:label="@string/title_activity_olvide_mi_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt20_Confirmacion_diario_recibido"
+            android:label="@string/title_activity_interfaz_veinte_admin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Recibido_los_dvd"
+            android:label="@string/title_activity_recibido_los_dvd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".menu_parent_principal.Pt22_Alta_codigo_seguridad_dvd"
+            android:label="@string/title_activity_alta_codigo_seguridad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".menu_parent_principal.Pt23_Confirmar_entrega_dvd"
+            android:label="@string/title_activity_confirmar_entrega_dvd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt5_video_publicidad_nuevo"
+            android:label="@string/title_activity_video_publicidad_nuevo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt6_video_plan_recompensa_red"
+            android:label="@string/title_activity_video_plan_recompensa_red"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt7_muestra_listado_ediciones"
+            android:label="@string/title_activity_pantalla_listado_ediciones"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt8_terminos_edicion"
+            android:label="@string/title_activity_pantalla_select_edicion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt9_promocion_lanzamiento"
+            android:label="@string/title_activity_pantalla_promocion_lanzamiento"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".menu_parent_principal.Atencion_al_cliente"
+            android:label="@string/title_activity_atencion_al_cliente"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt4_exito_registro_usuario"
+            android:label="@string/title_activity_msg_registro_usuario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".menu_parent_principal.Publicaciones_en_Diario_Clasificados_Digital"
+            android:label="@string/title_activity_publicaciones_en__diario__clasificados__digital"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_pt21_confirmacion_dvd_recibido"
+            android:label="@string/title_activity_interfaz_veintiuno_admin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pantalla_inicio_sesion"
+            android:label="@string/title_activity_pantalla_inicio_sesion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".menu_parent_principal.Cambiar_nueva_contrasenna"
+            android:label="@string/title_activity_cambiar_nueva_contrasenna"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_contrasenna_cambiada"
+            android:label="@string/title_activity_msg_contrasenna_cambiada"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vistas_mapas.Mapa_pt11_activar_gps"
+            android:label="@string/title_activity_mapa_pt11_activar_gps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vistas_mapas.Mapa_Seguimiento_satelital_dvd"
+            android:label="@string/title_activity_mapa__seguimiento_satelital_dvd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantallas_mensajes.Msg_restablecer_contrasenna"
+            android:label="@string/title_activity_msg_restablecer_contrasenna"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".videos_view.Video_view_example"
+            android:label="@string/title_activity_video_view_example"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".videos_view.Video_view_herramientas_digitales"
+            android:label="@string/title_activity_video_view_example"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".videos_view.Video_view_publicidad_nuevo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".videos_view.Video_view_plan_recompensas_red"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".videos_view.Video_view_video_pago_pim"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vistas_mapas.Mapa_example_buscador"
+            android:label="@string/title_activity_mapa_example_buscador"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

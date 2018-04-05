@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt16_detalle_de_Servicios"
+    tools:showIn="@layout/activity_detalle_de__servicios">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:padding="10sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView22"
+            style="@style/formHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:text="Detalle de los Servicios"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="6sp"
+            android:textAlignment="center"
+            android:text="Servicios Mensual de Clasificados Digital $200 y 100 ptos en la Red"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="6sp"
+            android:textAlignment="center"
+            android:text="1 DVD $50 y 25 ptos en la Red"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30sp"
+            android:background="@color/colorWhite"
+            android:padding="6sp"
+            android:textAlignment="center"
+            android:text="Total $250 y 125 ptos en la Red"
+            android:textSize="15dp"
+            android:textColor="@color/colorblack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/button44"
+            style="@style/botonAmarillo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickGoPantalla17Pim"
+            android:text="Comprar" />
+    </LinearLayout>
+
+</RelativeLayout>

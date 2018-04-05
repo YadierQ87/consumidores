@@ -1,0 +1,114 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="RelativeModel">
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@color/colorYellow</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="LinearLayoutWhiteForm">
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+
+    <style name="RaisedButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@android:color/holo_green_light</item>
+        <item name="colorButtonNormal">@android:color/holo_blue_light</item>
+    </style>
+
+
+    <style name="mybutton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="botonBlue" parent="mybutton">
+        <item name="android:textColor">#fff</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">#006bb2</item>
+        <item name="android:background">#006bb2</item>
+    </style>
+
+
+    <style name="botonyellow" parent="mybutton">
+        <item name="android:textColor">#333</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorYellowbg</item>
+        <item name="android:background">@color/colorYellowbg</item>
+    </style>
+
+    <style name="botonOrange" parent="mybutton">
+        <item name="android:textColor">#fff</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">#E96917</item>
+        <item name="android:background">#E96917</item>
+    </style>
+
+    <style name="botonBlanco" parent="mybutton">
+        <item name="android:textColor">#333</item>
+        <item name="android:background">@drawable/line_black</item>
+    </style>
+
+    <style name="botonAmarillo" parent="mybutton">
+        <item name="android:textColor">#333</item>
+        <item name="android:background">@drawable/linea_yelllow</item>
+    </style>
+
+    <style name="botonAzul" parent="mybutton">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/line_black</item>
+    </style>
+
+    <style name="inputWhite">
+        <item name="android:textColor">#000</item>
+        <item name="android:background">#fff</item>
+    </style>
+
+
+    <style name="tabHostWhite">
+        <!-- Customize your theme here. -->
+        <item name="android:typeface">serif</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="formHeading">
+
+    </style>
+
+    <style name="botonesEdiciones">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingBottom">0sp</item>
+        <item name="android:paddingTop">0sp</item>
+        <item name="android:paddingLeft">3sp</item>
+        <item name="android:paddingRight">3sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

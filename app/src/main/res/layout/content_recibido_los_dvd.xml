@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.Recibido_los_dvd"
+    tools:showIn="@layout/activity_recibido_los_dvd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView33"
+            style="@style/formHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aviso de Recibo de DVD"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            app:srcCompat="@mipmap/ic_diario_yellow" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Ha recibido el o los DVD por la persona que lo recomendo Ud" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button51"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/botonAmarillo"
+                android:text="NO" />
+
+            <Button
+                android:id="@+id/button52"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/botonAmarillo"
+                android:text="SI" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

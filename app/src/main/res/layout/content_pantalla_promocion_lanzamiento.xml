@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt9_promocion_lanzamiento"
+    tools:showIn="@layout/activity_pantalla_promocion_lanzamiento">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:text="Publicacion ilimitada en todos los rubros de sus avisos Clasificados en  www.clasificadosdigital.com.ar Siempre hasta que lo venda y sin Comisiones"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:text="Galeria Virtual con su propia Marca en  www.clasificadosdigital.com.ar Siempre hasta que lo venda y sin Comisiones"
+            android:textAlignment="center"
+            android:textColor="@color/colorGreen"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:text="Publicación de sus Avisos Clasificados con fotografías o publicidades en el Nuevo Diario Clasificados Digital edición gráfica  "
+            android:textAlignment="center"
+            android:textColor="@color/colorblack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:text="Dichas Publicaciones quedan sujetas al espacios disponibles de cada edición"
+            android:textAlignment="center"
+            android:textColor="@color/colorblack" />
+
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:text="Envio de un ejemplar de la 1 edición del Nuevo Diario Clasificados Digital, edición gráfica"
+            android:textAlignment="center"
+            android:textColor="@color/colorBluecito"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:layout_marginTop="8sp"
+            android:background="@color/colorYellow"
+            android:padding="3sp"
+            android:text="50$ = 25 ptos en la Red"
+            android:textAlignment="center"
+            android:textColor="@color/colorblack"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/button40"
+                style="@style/botonAmarillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onclickProgramarConsumoDiario"
+                android:text="Comprar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

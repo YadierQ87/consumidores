@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_contrasenna_cambiada"
+    tools:showIn="@layout/activity_msg_contrasenna_cambiada">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:text="Su Contraseña se ha cambiado con éxito!"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:padding="40sp"
+            android:layout_marginTop="50sp"
+            android:background="@color/colorYellow"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button55"
+                style="@style/botonBlanco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onClickIntentPantallaInicio"
+                android:text="Iniciar Sesion" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

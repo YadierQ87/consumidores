@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.menu_parent_principal.Publicaciones_en_Diario_Clasificados_Digital"
+    tools:showIn="@layout/activity_publicaciones_en_diario_clasificados_digital">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="139dp"
+                    android:layout_height="122dp"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foto de la Publicación Todas las publicaciones gratuitas por promociones están sujetas a la disponibilidad de la edición del Diario Clasificados Digital edición Gráfica"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorblack" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    style="@style/inputWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:minHeight="20sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerFormat"
+                    style="@style/inputWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:minHeight="20sp" />
+
+                <TextView
+                    android:id="@+id/textView55"
+                    style="@style/inputWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:hint="Numero de Promocion" />
+
+                <TextView
+                    android:id="@+id/textView54"
+                    style="@style/inputWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:hint="Numero de Celular a publicar para contactarlo" />
+
+                <TextView
+                    android:id="@+id/textView53"
+                    style="@style/inputWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:hint="Texto de Publicación (sujeto a espacio de publicación) " />
+
+                <Button
+                    android:id="@+id/button54"
+                    style="@style/botonBlue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Enviar publicación del Diario" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

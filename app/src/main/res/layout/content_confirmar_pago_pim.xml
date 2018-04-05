@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt18_confirmar_pago_pim"
+    tools:showIn="@layout/activity_confirmar_pago_pim">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/LinearLayoutWhiteForm"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:text="Numero de Celular para efectuar el pago de Clasificados Digital Nro: 2342357 " />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02"
+            android:background="@color/colorYellow"
+            android:padding="10sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Alta Pim.com.ar Marca en su celular *456#"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04"
+            android:textAlignment="center"
+            android:paddingTop="20sp"
+            android:textColor="@color/colorPrimary"
+            android:text="Su Patrocinador lo ayudara a a realizar el pago.
+            Una vez acreditado el pago Clasificados Digital le enviara un Mensaje de texto con el numero de Recomendacion para poder
+            desarrollar su Red de Consumidores y Recomendadores" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:orientation="horizontal"
+            android:padding="4sp">
+
+            <Button
+                android:id="@+id/button45"
+                style="@style/botonAmarillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmar Pago x PIM"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Ejemplo Mapas"    android:id="@+id/menu_mapas"  />
+    <item android:title="Ejemplo Video VideoView"    android:id="@+id/menu_videoxample"  />
+    <item android:title="Publicaciones en Diario"    android:id="@+id/menu_publicaciones"  />
+    <item android:title="Recomendar Publicaciones en Diario"      android:id="@+id/menu_recomendar_public"    />
+    <item android:title="Confirmacion que recibio Diario"       android:id="@+id/menu_confirmacion_diario"       />
+    <item android:title="Confirmacion que recibio DVD"  android:id="@+id/menu_confirmacion_dvd" />
+    <item android:title="Alta de Codigo seguridad DVD"   android:id="@+id/menu_alta_codigo" />
+    <item android:title="Entrega de DVD a un Candidato"   android:id="@+id/menu_entrega_dvd" />
+    <item android:title="Seguimiento Satelital de DVD"   android:id="@+id/menu_seguimiento_satelite" />
+    <item android:title="Notificaciones"   android:id="@+id/menu_notificaciones" />
+    <item android:title="Solicitud de DVD"   android:id="@+id/menu_solicitud_dvd" />
+    <item android:title="Atencion al cliente"   android:id="@+id/menu_atencion_cliente" />
+    <item android:title="Cambiar Nueva Contraseña"   android:id="@+id/menu_cambiar_passwd" />
+    <item android:title="Cierre de Sesión ( Salir de app)"   android:id="@+id/menu_close_sesion" />
+</menu>

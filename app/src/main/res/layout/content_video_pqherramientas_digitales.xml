@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt14_video_pqherramientas_digitales"
+    android:background="@color/colorYellow"
+    android:paddingBottom="20dp"
+    tools:showIn="@layout/activity_video_pqherramientas_digitales">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.06"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:text="Por qué utilizar Herramientas Digitales?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="0.06"
+            android:onClick="onclicksetUpVideoView"
+            android:background="@mipmap/ic_youtube"
+            android:text="" />
+
+
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:layout_weight="0.06"
+            android:textColor="#000"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Ud Ha visto el video?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="20sp"
+            android:weightSum="2"            >
+
+
+            <Button
+                android:id="@+id/btn_no_video"
+                style="@style/botonAmarillo"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.79"
+                android:onClick="onClickCerrarSesion"
+
+                android:text="No" />
+
+            <Button
+                android:id="@+id/btn_yes_video"
+                style="@style/botonAmarillo"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.71"
+                android:onClick="onclickGoPantalla15ProgramarConsumoDvd"
+                android:text="Si" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    android:paddingBottom="0sp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt5_video_publicidad_nuevo"
+    tools:showIn="@layout/activity_video_publicidad_nuevo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.06"
+            android:text="Por consumir y Recomendar en Red los servicios de Clasificados Digital obtene recompensas todos los meses. "
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/imageView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_weight="0.86"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:textAlignment="center"
+            android:onClick="onclickSetUpVideoView"
+            android:background="@mipmap/ic_youtube" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.06"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="Publicidad de Nuevo Diario Clasificados Digital edición gráfica "
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_weight="0.06"
+            android:textColor="@color/colorblack"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textAlignment="center"
+            android:text="Ud ha visto el video?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:background="@color/colorWhite"
+
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:weightSum="2"
+        android:layout_below="@+id/linearLayout4">
+
+
+        <Button
+            android:id="@+id/btn_no_video"
+            style="@style/botonAmarillo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickCerrarSesion"
+            android:text="No" />
+
+        <Button
+            android:id="@+id/btn_yes_video"
+            style="@style/botonAmarillo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickIntentPlanRecompensas"
+            android:text="Si" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

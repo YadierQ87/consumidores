@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellowbg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt7_muestra_listado_ediciones"
+    tools:showIn="@layout/activity_pantalla_listado_ediciones">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:id="@+id/linearLayout9"
+        android:layout_marginLeft="2sp"
+        android:layout_marginRight="2sp"
+        android:layout_marginTop="2sp">
+
+        <Button
+            android:id="@+id/buttonedicion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="@drawable/line_primarydark"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            android:onClick="onClickImagenPrimeraEdicion"
+            android:text="1 Edicion Mensual"
+             />
+
+        <Button
+            android:id="@+id/buttonedicion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+            android:text="2 Edicion Mensual"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorOrange"
+            android:onClick="onClickImagenSegundaEdicion"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/buttonedicion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+            android:text="3 Edicion Mensual"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBluecito"
+            android:onClick="onClickImagenTerceraEdicion"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/buttonedicion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+            android:text="4 Edicion Mensual"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorAccent"
+            android:onClick="onClickImagenCuartaEdicion"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout9">
+
+
+        <ImageView
+            android:id="@+id/imageViewCambiarEdicion"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_marginTop="0sp"
+            android:layout_weight="0.41"
+            android:paddingTop="0dp"
+            android:src="@drawable/t1edicion" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/botonBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:onClick="onClickSiguientePantalla8"
+            android:text="Continuar" />
+
+    </LinearLayout>
+
+</RelativeLayout>

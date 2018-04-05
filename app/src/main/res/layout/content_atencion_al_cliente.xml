@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10sp"
+    android:background="@color/colorYellow"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.menu_parent_principal.Atencion_al_cliente"
+    tools:showIn="@layout/activity_atencion_al_cliente">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:text="@string/atencion_cliente"
+        style="@style/formHeading"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50sp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/asunto"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <EditText
+            android:id="@+id/editTextAsunto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/inputWhite"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textViewContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/observaciones"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <EditText
+            android:id="@+id/textAreaContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/inputWhite"
+            android:inputType="textMultiLine"
+            android:layout_weight="0.37" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button40"
+                style="@style/botonBlue"
+                android:layout_weight="1"
+                android:text="@string/enviar" />
+
+            <Button
+                android:id="@+id/button39"
+                style="@style/botonBlue"
+                android:backgroundTint="@color/colorOrange"
+                android:layout_weight="1"
+                android:text="@string/cancelar" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

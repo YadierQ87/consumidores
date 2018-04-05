@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.vistas_mapas.Mapa_pt11_activar_gps"
+    tools:showIn="@layout/activity_mapa_pt11_activar_gps">
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapa"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="AIzaSyBsGdVt-j8Fm8naZxBP7IZBreprvVejZZE"
+        android:clickable="true" />
+</LinearLayout>
+

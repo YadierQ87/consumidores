@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.solprob.yadierq87.consumidores.menu_parent_principal.Pt23_Confirmar_entrega_dvd"
+    tools:showIn="@layout/activity_confirmar_entrega_dvd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageButtonPersona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="67dp"
+                    android:layout_weight="1"
+                    android:onClick="onclickHacerFotoPersona"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <ImageView
+                    android:id="@+id/imageButtonCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onclickHacerFotoCasa"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:padding="10sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_marginRight="3sp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:paddingBottom="4sp"
+                    android:paddingTop="4sp"
+                    android:text="Persona a quien se Entrega DVD"
+                    android:textAlignment="center"
+
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="3sp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:text="Foto Casa donde se entrego DVD"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout6"
+                android:orientation="horizontal"
+                android:padding="8sp">
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha A retirar DVD"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Horario Retirar DVD"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout7"
+                android:background="@color/colorYellow"
+                android:orientation="horizontal"
+                android:padding="8sp">
+
+                <EditText
+                    android:id="@+id/editText22"
+                    style="@style/inputWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20sp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="time" />
+
+                <EditText
+                    android:id="@+id/editText23"
+                    style="@style/inputWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="date" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorYellow"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/editText19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3sp"
+                    android:background="@color/colorWhite"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Nombre y Apellidos" />
+
+                <EditText
+                    android:id="@+id/editText18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3sp"
+                    android:layout_weight="0.05"
+                    android:background="@color/colorWhite"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Direccion" />
+
+                <EditText
+                    android:id="@+id/editText16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3sp"
+                    android:layout_weight="0.32"
+                    android:background="@color/colorWhite"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Localidad" />
+
+                <EditText
+                    android:id="@+id/editTextCelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3sp"
+                    android:background="@color/colorWhite"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Nro de Celular" />
+
+                <EditText
+                    android:id="@+id/editTextMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3sp"
+                    android:layout_weight="0.30"
+                    android:background="@color/colorWhite"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="E-mail" />
+
+                <Button
+                    android:id="@+id/button56"
+                    style="@style/botonBlue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="onClickConfirmarEntregaDvdGoToPantallaGPS"
+                    android:text="Confirmar Entrega DVD" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

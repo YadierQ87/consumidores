@@ -1,0 +1,13 @@
+package com.solprob.yadierq87.consumidores;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class Reglas_premios_edicion extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_reglas_premios_edicion);
+    }
+}
