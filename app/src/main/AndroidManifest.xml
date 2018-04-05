@@ -207,10 +207,6 @@
         <activity
             android:name=".videos_view.Video_view_video_pago_pim"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".vistas_mapas.Mapa_example_buscador"
-            android:label="@string/title_activity_mapa_example_buscador"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -19,8 +19,7 @@
             android:layout_height="wrap_content"
             android:weightSum="1">
 
-            <include layout="@layout/layout_cabecera"
-                android:layout_weight="0.92" />
+            <include layout="@layout/layout_cabecera"  />
 
 
 
