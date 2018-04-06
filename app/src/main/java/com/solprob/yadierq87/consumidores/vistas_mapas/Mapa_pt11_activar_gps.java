@@ -33,7 +33,7 @@ import com.solprob.yadierq87.consumidores.pantallas_mensajes.Msg_pt14_video_pqhe
 import java.io.IOException;
 import java.util.List;
 
-public class Mapa_pt11_activar_gps extends AppCompatActivity implements OnMapReadyCallback {
+public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
 
     private GoogleMap mapa;
     LocationManager locManager;
@@ -144,8 +144,15 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements OnMapRea
         mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
         mMap.setMyLocationEnabled(true);
         /** Called when the user clicks a marker. */
-
+        mMap.setOnInfoWindowClickListener(this);
     }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Toast.makeText(this, "Info window clicked",
+                Toast.LENGTH_SHORT).show();
+    }
+
 
     public boolean onMarkerClick(final Marker marker) {
         // Retrieve the data from the marker.

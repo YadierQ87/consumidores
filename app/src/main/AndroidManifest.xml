@@ -36,9 +36,6 @@
             </intent-filter>
         </activity>
 
-
-        <activity android:name="com.keyes.youtube.OpenYouTubePlayerActivity"></activity>
-
         <activity android:name=".Recomendar_publicaciones" />
         <activity
             android:name=".Principal_menu"

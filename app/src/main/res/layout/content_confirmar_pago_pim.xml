@@ -11,21 +11,42 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/LinearLayoutWhiteForm"
+
         android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1sp"
+            android:background="@color/colorYellow"
+            android:layout_weight="0.04"
+            app:srcCompat="@mipmap/ic_pim" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:background="@color/colorYellow"
+            android:text="Ver Publicidad" />
 
         <TextView
             android:id="@+id/textView26"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.04"
+            android:paddingTop="4sp"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:text="Numero de Celular para efectuar el pago de Clasificados Digital Nro: 2342357 " />
 
         <TextView
             android:id="@+id/textView25"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.02"
             android:background="@color/colorYellow"
@@ -41,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.04"
             android:textAlignment="center"
-            android:paddingTop="20sp"
+            android:padding="10sp"
             android:textColor="@color/colorPrimary"
             android:text="Su Patrocinador lo ayudara a a realizar el pago.
             Una vez acreditado el pago Clasificados Digital le enviara un Mensaje de texto con el numero de Recomendacion para poder
@@ -61,6 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Confirmar Pago x PIM"
+                android:onClick="onClickGo20ConfirmarDiarioRecibido"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>
 

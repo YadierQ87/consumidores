@@ -27,8 +27,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="62dp"
+                    android:layout_height="80sp"
                     android:src="@mipmap/ic_launcher" />
 
                 <LinearLayout
@@ -39,7 +39,7 @@
 
                     <TextView
                         android:id="@+id/textView29"
-                        android:layout_width="186dp"
+                        android:layout_width="152dp"
                         android:layout_height="wrap_content"
                         android:text="PAGOS PIM"
                         android:textAlignment="center"
@@ -51,8 +51,10 @@
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@mipmap/ic_diario_yellow" />
+                    android:layout_height="140sp"
+                    android:layout_marginRight="5sp"
+                    android:paddingBottom="60sp"
+                    android:src="@mipmap/ic_diario_yellow" />
 
             </LinearLayout>
 
