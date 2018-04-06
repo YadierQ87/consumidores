@@ -11,6 +11,7 @@ import android.widget.Spinner;
 
 import com.solprob.yadierq87.consumidores.R;
 import com.solprob.yadierq87.consumidores.clases_dominio.consumo_diario;
+import com.solprob.yadierq87.consumidores.vistas_mapas.Mapa_pt11_activar_gps;
 
 public class Msg_pt10_programar_consumo_diario extends AppCompatActivity {
 
@@ -44,11 +45,11 @@ public class Msg_pt10_programar_consumo_diario extends AppCompatActivity {
     // go to pantalla 11 Programar Consumo Diario
     public void onclickPantalla11Mapas(View v){
 
-        startActivityForResult(new Intent(this, Msg_pt14_video_pqherramientas_digitales.class), 1);
+       //startActivityForResult(new Intent(this, Msg_pt14_video_pqherramientas_digitales.class), 1);
 
         //Arreglar cuando lleguen los mapas
         // TODO: 3/21/2018  metodo salvar datos en la bd web/
-        //startActivityForResult(new Intent(this, Mapa_pt11_activar_gps.class), 1);
+        startActivityForResult(new Intent(this, Mapa_pt11_activar_gps.class), 1);
     }    
     
 }

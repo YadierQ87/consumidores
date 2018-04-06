@@ -13,13 +13,15 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:minHeight="?attr/actionBarSize"
             android:background="@drawable/recuadro_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
-            <include layout="@layout/layout_cabecera"  />
+            <include
+                layout="@layout/layout_cabecera"
+                android:layout_width="match_parent"
+                android:layout_height="70dp" />
 
         </android.support.v7.widget.Toolbar>
 
