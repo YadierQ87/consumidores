@@ -24,8 +24,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import static com.google.android.gms.internal.zzt.TAG;
-
 public class Pantalla_inicio_sesion extends AppCompatActivity {
 
     public SharedPreferences prefs;
@@ -148,7 +146,7 @@ public class Pantalla_inicio_sesion extends AppCompatActivity {
             // Making a request to url and getting response
             String jsonStr = sh.makeServiceCall(url_api);
 
-            Log.e(TAG, "Response from url: " + jsonStr);
+            Log.e("tag", "Response from url: " + jsonStr);
 
             if (jsonStr != null) {
                 try {
@@ -166,9 +164,9 @@ public class Pantalla_inicio_sesion extends AppCompatActivity {
                                 nombre_apellidos,email,num_celular,nickname,passwd);
                         listUsers.add(i,user);
                     }
-                    Log.e(TAG, "Json list: " + listUsers);
+                    Log.e("tag", "Json list: " + listUsers);
                 } catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+                    Log.e("tag", "Json parsing error: " + e.getMessage());
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -181,7 +179,7 @@ public class Pantalla_inicio_sesion extends AppCompatActivity {
 
                 }
             } else {
-                Log.e(TAG, "Couldn't get json from server.");
+                Log.e("tag", "Couldn't get json from server.");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

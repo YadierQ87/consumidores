@@ -23,7 +23,7 @@ import com.solprob.yadierq87.consumidores.menu_parent_principal.Pt22_Alta_codigo
 import com.solprob.yadierq87.consumidores.menu_parent_principal.Pt23_Confirmar_entrega_dvd;
 import com.solprob.yadierq87.consumidores.menu_parent_principal.Publicaciones_en_Diario_Clasificados_Digital;
 import com.solprob.yadierq87.consumidores.videos_view.Video_view_example;
-import com.solprob.yadierq87.consumidores.vistas_mapas.MapsBuscador_direcciones;
+import com.solprob.yadierq87.consumidores.vistas_mapas.Buscador_direcciones_maps;
 
 public class Principal_menu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -89,7 +89,7 @@ public class Principal_menu extends AppCompatActivity
         }
 
         else if (id == R.id.menu_mapas) {
-            startActivityForResult(new Intent(this, MapsBuscador_direcciones.class), 1);
+            startActivityForResult(new Intent(this, Buscador_direcciones_maps.class), 1);
         }
         else if (id == R.id.menu_videoxample) {
             startActivityForResult(new Intent(this, Video_view_example.class), 1);

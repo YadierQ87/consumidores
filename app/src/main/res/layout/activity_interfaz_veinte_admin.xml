@@ -21,7 +21,8 @@
             <include
                 layout="@layout/layout_cabecera"
                 android:layout_width="match_parent"
-                android:layout_height="70dp" />
+                android:layout_height="70dp"
+                android:layout_weight="1.6" />
 
         </android.support.v7.widget.Toolbar>
 

@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="70sp"
+            android:layout_marginTop="75sp"
             android:padding="5sp"
             android:textAlignment="center"
             android:background="@color/colorWhite"
@@ -61,37 +61,15 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="120sp"
+        android:layout_marginTop="125sp"
         android:layout_marginBottom="60sp"
         />
-
-    <LinearLayout
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130sp"
-        android:layout_marginLeft="5sp"
-        android:layout_marginRight="70sp"
-        android:background="@color/colorWhite"
-        android:gravity="bottom"
-        android:paddingBottom="5sp">
-
-
-        <AutoCompleteTextView
-            android:id="@+id/textViewDirecciones"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="top"
-            android:textSize="12sp"
-            android:hint="BUSCADOR DIRECCIONES"
-            android:visibility="visible" />
-
-        <ImageButton
-            android:id="@+id/ButtonSearchAdress"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            app:srcCompat="@android:drawable/ic_menu_search" />
-    </LinearLayout>
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        />
 
 
 </android.support.design.widget.CoordinatorLayout>
