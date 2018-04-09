@@ -29,12 +29,6 @@ dependencies {
     compile 'com.android.support:support-v4:25.2.0'
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
-    //compile 'com.google.android.gms:play-services-maps:10.2.0'
-    compile 'com.google.android.gms:play-services:10.2.0'
-    //compile 'com.google.android.gms:play-services:11.0.4'
-    //compile 'com.google.android.gms:play-services-maps:10.2.0'
-    //play services
-    //compile "com.google.android.gms:play-services-maps:$rootProject.playLocationVersion"
-    //compile "com.google.android.gms:play-services-location:$rootProject.playLocationVersion"
-   // compile "com.google.android.gms:play-services:$rootProject.playLocationVersion"
+    compile 'com.google.android.gms:play-services-maps:10.2.0'
+    compile "com.google.android.gms:play-services-places:10.2.0"
 }
