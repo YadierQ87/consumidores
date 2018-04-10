@@ -19,13 +19,15 @@
             android:id="@+id/textView51"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40sp"
             android:layout_gravity="center"
+            android:layout_marginTop="60sp"
             android:gravity="center"
-            android:text="Su Registro se ha Realizado con Exito"
+            android:text="Su Registro se ha realizado con Exito"
             android:textAlignment="center"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp"
+            android:textSize="18dp"
             tools:layout_editor_absoluteX="117dp"
             tools:layout_editor_absoluteY="150dp" />
 
@@ -48,7 +50,7 @@
         <Button
             android:id="@+id/button41"
             style="@style/botonBlue"
-            android:layout_width="match_parent"
+            android:layout_width="181dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"

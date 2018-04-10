@@ -22,7 +22,6 @@ import com.solprob.yadierq87.consumidores.menu_parent_principal.Cambiar_nueva_co
 import com.solprob.yadierq87.consumidores.menu_parent_principal.Pt22_Alta_codigo_seguridad_dvd;
 import com.solprob.yadierq87.consumidores.menu_parent_principal.Pt23_Confirmar_entrega_dvd;
 import com.solprob.yadierq87.consumidores.menu_parent_principal.Publicaciones_en_Diario_Clasificados_Digital;
-import com.solprob.yadierq87.consumidores.videos_view.Video_view_example;
 import com.solprob.yadierq87.consumidores.vistas_mapas.Buscador_direcciones_maps;
 
 public class Principal_menu extends AppCompatActivity
@@ -91,8 +90,8 @@ public class Principal_menu extends AppCompatActivity
         else if (id == R.id.menu_mapas) {
             startActivityForResult(new Intent(this, Buscador_direcciones_maps.class), 1);
         }
-        else if (id == R.id.menu_videoxample) {
-            startActivityForResult(new Intent(this, Video_view_example.class), 1);
+        else if (id == R.id.menu_example) {
+            startActivityForResult(new Intent(this, Pt23_Confirmar_entrega_dvd.class), 1);
         }
 
 

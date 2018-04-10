@@ -65,21 +65,20 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMa
         });
         try {
             mapFragment.getMapAsync(this);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             Toast.makeText(this, "Permission not granted", Toast.LENGTH_SHORT).show();
         }
     }
 
 
     // go to pantalla 11 Programar Consumo Diario
-    public void onClickPt14_video_pqherramientas_digitales(View v){
+    public void onClickPt14_video_pqherramientas_digitales(View v) {
         // go to pantalla 14 Video pq Herramientas digitales
         finish();
         startActivityForResult(new Intent(this, Msg_pt14_video_pqherramientas_digitales.class), 1);
     }
 
-    public void toast(String mensaje){
+    public void toast(String mensaje) {
         Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
     }
 
@@ -95,12 +94,22 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMa
         return true;
     }
 
+
+    public LatLng devolverPosition(Location loc) {
+        LatLng position;
+        if (loc != null) {
+            position = new LatLng(loc.getLatitude(), loc.getLongitude());
+        } else {
+            position = new LatLng(-34.6083, -58.3712);
+        }
+        return position;
+    }
+
     @Override
     public void onMapReady(GoogleMap mMap) {
 
         mapa = mMap;
-        mapa.setMyLocationEnabled(true);
-
+        LatLng position;
         //Si el GPS no está habilitado
         locManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         if (!locManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -111,20 +120,25 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMa
             Dialog dialogoInternet = mostrarAvisoInternetDeshabilitado();
             dialogoInternet.show();
         }
-        LatLng position;
-        if (locManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Permission not granted", Toast.LENGTH_SHORT).show();
-            }
-            Location mylocation = locManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            position = new LatLng(mylocation.getLatitude(), mylocation.getLongitude());
-            mMap.addMarker(new MarkerOptions().position(position).title("Marker mi posición"));
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
         }
-        else{
-            position = new LatLng(-34.6083,-58.3712);
-            mMap.addMarker(new MarkerOptions().position(position).title("Marker in Buenos Aires"));
-        }
+        Location mylocation = locManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        position = devolverPosition(mylocation);
+
+       // position = new LatLng(-34.6083,-58.3712);
+        mMap.addMarker(new MarkerOptions().position(position).title("Marker mi posicion"));
+        mMap.getMaxZoomLevel();
         mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
+        //mapIntent.setPackage("com.google.android.apps.maps");
         mMap.setMyLocationEnabled(true);
         /** Called when the user clicks a marker. */
         mMap.setOnInfoWindowClickListener(this);
@@ -164,165 +178,6 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMa
         });
         return builder.create();
     }
-
-    //Ejemplo de fragment actibvity AutoSearch de google
-
-   /* public class PlacesAutoCompleteAdapter extends ArrayAdapter<String> implements Filterable {
-        public static final String LOG_TAG = "ImpactForce";
-        String textaddress;
-        private ArrayList<String> resultList = new ArrayList<String>();
-        private LayoutInflater inflater;
-        private ViewHolder holder;
-
-        public PlacesAutoCompleteAdapter(Context context, int textViewResourceId) {
-            super(context, textViewResourceId);
-            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        }
-
-        @Override
-        public int getCount() {
-            return resultList.size();
-        }
-
-        @Override
-        public String getItem(int index) {
-            if (resultList.size() > index) {
-                return resultList.get(index);
-            }
-            return "";
-        }
-
-        @Override
-        public View getDropDownView(int position, View convertView, ViewGroup parent) {
-            return getMyView(position, convertView, parent);
-        }
-
-        private View getMyView(int position, View convertView, ViewGroup parent) {
-
-            if (convertView == null) {
-                convertView = inflater.inflate(R.layout.autocomplete_list_text, parent, false);
-                holder = new ViewHolder();
-
-                holder.addressTitle = (TextView) convertView.findViewById(R.id.textViewTitleHeader);
-                holder.address = (TextView) convertView.findViewById(R.id.textViewTitleSub);
-                convertView.setTag(holder);
-            } else {
-                holder = (ViewHolder) convertView.getTag();
-            }
-            try {
-                String address = getItem(position);
-
-                String add[] = address.split(",");
-
-                holder.addressTitle.setText(add[0]);
-                holder.address.setText(address);
-            } catch (Exception e) {
-            }
-            return convertView;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            return getMyView(position, convertView, parent);
-        }
-
-        @Override
-        public Filter getFilter() {
-            Filter filter = new Filter() {
-                @Override
-                protected FilterResults performFiltering(CharSequence constraint) {
-                    FilterResults filterResults = new FilterResults();
-                    if (constraint != null) {
-                        // Retrieve the autocomplete results.
-                        if (Utility.isOnline(getContext())) {
-                            resultList = autocomplete(constraint.toString());
-
-                            // Assign the data to the FilterResults
-                            filterResults.values = resultList;
-                            filterResults.count = resultList.size();
-                        }
-
-                    }
-                    return filterResults;
-                }
-
-                @Override
-                protected void publishResults(CharSequence constraint,
-                                              FilterResults results) {
-                    if (results != null && results.count > 0) {
-                        notifyDataSetChanged();
-                    } else {
-                        notifyDataSetInvalidated();
-                    }
-                }
-            };
-            return filter;
-        }
-
-        private ArrayList<String> autocomplete(String input) {
-
-            HttpURLConnection conn = null;
-            StringBuilder jsonResults = new StringBuilder();
-            try {
-                //https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&types=geocode&key=YOUR_API_KEY
-                StringBuilder sb = new StringBuilder(NetworkConstant.PLACES_API_BASE
-                        + NetworkConstant.TYPE_AUTOCOMPLETE + NetworkConstant.OUT_JSON);
-                //sb.append("&types=geocode&key=" + Constant.PLACES_AUTOCOMPLETE_API_KEY);
-                sb.append("?sensor=false&key=" + NetworkConstant.PLACES_AUTOCOMPLETE_API_KEY);
-
-                // sb.append("&location=" + BeanLocation.getLocation().getLatitude()
-                // + "," + BeanLocation.getLocation().getLongitude());
-                sb.append("&radius=500");
-                sb.append("&input=" + URLEncoder.encode(input, "utf8"));
-                Log.w("url data", "" + sb.toString());
-                // AppLog.Log("PlaceAdapter", "Place Url : " + sb.toString());
-                URL url = new URL(sb.toString());
-                conn = (HttpURLConnection) url.openConnection();
-                InputStreamReader in = new InputStreamReader(conn.getInputStream());
-                Log.w("url data", "" + sb.toString());
-                // Load the results into a StringBuilder
-                int read;
-                char[] buff = new char[1024];
-                while ((read = in.read(buff)) != -1) {
-                    jsonResults.append(buff, 0, read);
-                }
-            } catch (MalformedURLException e) {
-                Log.e(LOG_TAG, "Error processing Places API URL", e);
-                return resultList;
-            } catch (IOException e) {
-                Log.e(LOG_TAG, "Error connecting to Places API", e);
-                return resultList;
-            } finally {
-                if (conn != null) {
-                    conn.disconnect();
-                }
-            }
-
-            try {
-                // Create a JSON object hierarchy from the results
-                // System.out.println(jsonResults.toString());
-                JSONObject jsonObj = new JSONObject(jsonResults.toString());
-                JSONArray predsJsonArray = jsonObj.getJSONArray("predictions");
-
-                // Extract the Place descriptions from the results
-                resultList.clear();
-                for (int i = 0; i < predsJsonArray.length(); i++) {
-                    resultList.add(predsJsonArray.getJSONObject(i).getString(
-                            "description"));
-                }
-            } catch (JSONException e) {
-                Log.e(LOG_TAG, "Cannot process JSON results", e);
-            }
-
-            return resultList;
-        }
-
-        public class ViewHolder {
-
-            TextView address;
-            TextView addressTitle;
-        }
-    }*/
 
 
 }

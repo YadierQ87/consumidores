@@ -68,4 +68,8 @@
     <string name="title_activity_msg_restablecer_contrasenna">Msg_restablecer_contrasenna</string>
     <string name="title_activity_video_view_example">Video_view_example</string>
     <string name="title_activity_mapa_example_buscador">Mapa_example_buscador</string>
+
+
+    <string name="get_location">Get my location</string>
+    <string name="address_text">"Address: %1$s"</string>
 </resources>

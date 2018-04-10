@@ -45,8 +45,7 @@
                 android:id="@+id/editTextNroRecomendacion"
                 style="@style/inputWhite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.19"
+                android:layout_height="38dp"
                 android:inputType="textPersonName" />
 
             <TextView
@@ -60,7 +59,7 @@
                 android:id="@+id/editTextNombreApellidos"
                 style="@style/inputWhite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:layout_weight="0.17"
                 android:inputType="textPersonName" />
 
@@ -75,7 +74,7 @@
                 android:id="@+id/editTextEmailUser"
                 style="@style/inputWhite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:layout_weight="0.19"
                 android:inputType="textPersonName" />
 
@@ -90,7 +89,7 @@
                 android:id="@+id/editTextNumeroCelular"
                 style="@style/inputWhite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:layout_weight="0.19"
                 android:inputType="textPersonName" />
 
@@ -105,8 +104,8 @@
                 android:id="@+id/editTextNickname"
                 style="@style/inputWhite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.17"
+                android:layout_height="38dp"
+                android:layout_weight="0.55"
                 android:inputType="textPersonName" />
 
             <TextView
@@ -120,16 +119,17 @@
                 android:id="@+id/editTextPasswordUser"
                 style="@style/inputWhite"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.17"
+                android:layout_height="38dp"
                 android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btn_crearcuenta"
                 style="@style/botonBlanco"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_width="236dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="20sp"
+                android:gravity="center"
                 android:onClick="onClickCreateNuevoUsuario"
                 android:text="@string/crear_cuenta" />
 

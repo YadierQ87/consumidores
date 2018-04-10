@@ -5,6 +5,8 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.solprob.yadierq87.consumidores.R;
@@ -23,12 +26,20 @@ import com.solprob.yadierq87.consumidores.vistas_mapas.Mapa_pt11_activar_gps;
 
 import org.apache.http.message.BasicNameValuePair;
 
+import java.io.BufferedInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class Pt23_Confirmar_entrega_dvd extends AppCompatActivity {
 
     private static final int TOMAR_FOTO_PERSONA = 1;
     private static final int TOMAR_FOTO_CASA = 2;
+    private static final int TOMAR_FOTO_PERSONA_Camara = 401;
+    private static final int TOMAR_FOTO_PERSONA_Galeria = 501;
+    private static final int TOMAR_FOTO_CASA_Galeria = 402;
+    private static final int TOMAR_FOTO_CASA_Camara = 502;
+
     private Uri fotoSeleccionada;
     public confirmacion_entrega_dvd confirmado;
     private static String url_api = "http://192.168.137.1/now-dev/api_consumidores/methods/postInsert.php";
@@ -100,14 +111,21 @@ public class Pt23_Confirmar_entrega_dvd extends AppCompatActivity {
     }
 
     public void LanzarIntentCamara(int codeCamara){
+
+        int codeAction = TOMAR_FOTO_CASA_Camara;
+        if(codeCamara == TOMAR_FOTO_PERSONA)
+            codeAction = TOMAR_FOTO_PERSONA_Camara;
         Intent camaraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(camaraIntent, codeCamara);
+        startActivityForResult(camaraIntent, codeAction);
     }
 
     public void LanzarIntentGaleria(int codeGaleria){
+        int codeAction = TOMAR_FOTO_CASA_Galeria;
+        if(codeGaleria == TOMAR_FOTO_PERSONA)
+            codeAction = TOMAR_FOTO_PERSONA_Galeria;
         Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
         galleryIntent.setType("image/*");
-        startActivityForResult(galleryIntent, codeGaleria);
+        startActivityForResult(galleryIntent,codeAction );
     }
 
     public void onclickHacerFotoPersona(View v){
@@ -122,15 +140,44 @@ public class Pt23_Confirmar_entrega_dvd extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if  (requestCode == TOMAR_FOTO_PERSONA) {
-            /*Bitmap imagen = (Bitmap) data.getExtras().get("data");
-            ImageView iv = (ImageView)findViewById(R.id.imageButtonPersona);
-            iv.setImageBitmap(imagen);*/
+        // 4 tipos de result
+        if  (requestCode == TOMAR_FOTO_PERSONA_Camara) {
+            if (data.hasExtra("data")) {
+                ImageView iv = (ImageView)findViewById(R.id.imageButtonPersona);
+                iv.setImageBitmap((Bitmap) data.getParcelableExtra("data"));
+            }
         }
-        if  (requestCode == TOMAR_FOTO_CASA) {
-            /*Bitmap imagen = (Bitmap) data.getExtras().get("data");
-            ImageView iv = (ImageView)findViewById(R.id.imageButtonCasa);
-            iv.setImageBitmap(imagen);*/
+        if  (requestCode == TOMAR_FOTO_PERSONA_Galeria) {
+            Uri selectedImage = data.getData();
+            InputStream is;
+            try {
+                is = getContentResolver().openInputStream(selectedImage);
+                BufferedInputStream bis = new
+                        BufferedInputStream(is);
+                Bitmap bitmap = BitmapFactory.decodeStream(bis);
+                ImageView iv = (ImageView)findViewById(R.id.imageButtonPersona);
+                iv.setImageBitmap(bitmap);
+            } catch
+                    (FileNotFoundException e) {}
+        }
+        if  (requestCode == TOMAR_FOTO_CASA_Camara) {
+            if (data.hasExtra("data")) {
+                ImageView iv = (ImageView)findViewById(R.id.imageButtonCasa);
+                iv.setImageBitmap((Bitmap) data.getParcelableExtra("data"));
+            }
+        }
+        if  (requestCode == TOMAR_FOTO_CASA_Galeria) {
+            Uri selectedImage = data.getData();
+            InputStream is;
+            try {
+                is = getContentResolver().openInputStream(selectedImage);
+                BufferedInputStream bis = new
+                        BufferedInputStream(is);
+                Bitmap bitmap = BitmapFactory.decodeStream(bis);
+                ImageView iv = (ImageView)findViewById(R.id.imageButtonCasa);
+                iv.setImageBitmap(bitmap);
+            } catch
+                    (FileNotFoundException e) {}
         }
     }
 

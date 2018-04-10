@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="Ejemplo Mapas"    android:id="@+id/menu_mapas"  />
-    <item android:title="Ejemplo Video VideoView"    android:id="@+id/menu_videoxample"  />
+    <item android:title="Ejemplo Foto Camara"    android:id="@+id/menu_example"  />
     <item android:title="Publicaciones en Diario"    android:id="@+id/menu_publicaciones"  />
     <item android:title="Recomendar Publicaciones en Diario"      android:id="@+id/menu_recomendar_public"    />
     <item android:title="Confirmacion que recibio Diario"       android:id="@+id/menu_confirmacion_diario"       />

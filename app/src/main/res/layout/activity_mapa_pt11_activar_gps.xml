@@ -61,15 +61,16 @@
         android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120sp"
-        android:background="@color/colorWhite" />
+        android:layout_marginTop="118sp"
+        android:background="@drawable/linea_fnegro"
+        />
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="145sp"
+        android:layout_marginTop="160sp"
         android:layout_marginBottom="60sp"
         />
 
