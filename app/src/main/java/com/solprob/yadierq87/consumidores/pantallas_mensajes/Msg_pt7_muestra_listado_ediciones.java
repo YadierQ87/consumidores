@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -22,9 +23,16 @@ public class Msg_pt7_muestra_listado_ediciones extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_listado_ediciones);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingBtnEdiciones);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lanzarIntentSiguientePantalla8();
+            }
+        });
     }
 
-    public void onClickSiguientePantalla8(View v){
+    public void lanzarIntentSiguientePantalla8(){
         finish();
         startActivityForResult(new Intent(this, Msg_pt8_terminos_edicion.class), 1);
     }

@@ -13,26 +13,31 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:minHeight="?attr/actionBarSize"
-            android:background="@drawable/recuadro_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="109dp">
+            android:layout_height="114dp"
+            android:paddingRight="3sp"
+            android:background="@drawable/recuadro_toolbar"
+            android:minHeight="?attr/actionBarSize">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:weightSum="2"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView6"
-                    android:layout_width="145dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="192dp"
+                    android:layout_weight="1.0"
+                    android:paddingBottom="80dp"
                     app:srcCompat="@drawable/redgrande" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:layout_weight="1.0"
                     android:paddingLeft="10sp">
 
                     <TextView
@@ -40,10 +45,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:padding="2sp"
                         android:text="1 Edición Mensual= $50, 25 Puntos"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="10sp" />
+                        android:textSize="9sp" />
 
                     <TextView
                         android:id="@+id/textView30"
@@ -53,7 +59,7 @@
                         android:text="2 Edición Mensual= $100, 50 Puntos"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="10sp" />
+                        android:textSize="9sp" />
 
                     <TextView
                         android:id="@+id/textView31"
@@ -63,17 +69,17 @@
                         android:text="3 Edición Mensual= $150, 75 Puntos"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="10sp" />
+                        android:textSize="9sp" />
 
                     <TextView
                         android:id="@+id/textView32"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="4 Edición Mensual= $200, 100 Puntos"
+                        android:text="4 Edición Mensual= $200,100 Puntos"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="10sp" />
+                        android:textSize="9sp" />
 
 
                 </LinearLayout>
@@ -89,5 +95,18 @@
 
     <include layout="@layout/content_pantalla_listado_ediciones"
         android:id="@+id/include" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingBtnEdiciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini"
+        app:layout_anchor="@+id/include"
+        android:layout_margin="4sp"
+        app:layout_anchorGravity="bottom|right"
+        app:srcCompat="@android:drawable/ic_menu_send" />
 
 </android.support.design.widget.CoordinatorLayout>

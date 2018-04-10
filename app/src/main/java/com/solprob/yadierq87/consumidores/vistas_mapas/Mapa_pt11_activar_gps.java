@@ -12,17 +12,17 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
-import com.google.android.gms.location.places.ui.PlaceSelectionListener;
+import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -40,29 +40,23 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMa
     private GoogleMap mapa;
     LocationManager locManager;
     private List<Address> address;
+    public LatLng latLngPickup;
+    Place place;
+    final int PLACE_PICKER_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa_pt11_activar_gps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
-                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
-        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPlaceSelected(Place place) {
-                // TODO: Get info about the selected place.
-                Log.i("tag", "Place: " + place.getName());
-            }
-
-            @Override
-            public void onError(Status status) {
-                // TODO: Handle the error.
-                Log.i("tag", "An error occurred: " + status);
+            public void onClick(View view) {
+                LanzarIntentBuscarUbicaciones();
             }
         });
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         try {
             mapFragment.getMapAsync(this);
         } catch (Exception e) {
@@ -75,11 +69,32 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMa
     public void onClickPt14_video_pqherramientas_digitales(View v) {
         // go to pantalla 14 Video pq Herramientas digitales
         finish();
-        startActivityForResult(new Intent(this, Msg_pt14_video_pqherramientas_digitales.class), 1);
+        Intent herramientasIntent = new Intent(this, Msg_pt14_video_pqherramientas_digitales.class);
+        herramientasIntent.putExtra("place_add",place.getAddress());
+        herramientasIntent.putExtra("place_name",place.getName());
+        herramientasIntent.putExtra("place_LatLong",place.getLatLng());
+        startActivityForResult(herramientasIntent, 1);
     }
 
-    public void toast(String mensaje) {
-        Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
+    // go to pantalla 11 Programar Consumo Diario
+    public void LanzarIntentBuscarUbicaciones() {
+        PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+        try {
+            startActivityForResult(builder.build(this), PLACE_PICKER_REQUEST);
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == PLACE_PICKER_REQUEST){
+            if (resultCode == RESULT_OK) {
+                place = PlacePicker.getPlace(this, data);
+                Toast.makeText(this, "Info window clicked" + place.getName(),Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     //Chequea estado de la red
@@ -133,12 +148,10 @@ public class Mapa_pt11_activar_gps extends AppCompatActivity implements GoogleMa
         }
         Location mylocation = locManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         position = devolverPosition(mylocation);
-
        // position = new LatLng(-34.6083,-58.3712);
         mMap.addMarker(new MarkerOptions().position(position).title("Marker mi posicion"));
         mMap.getMaxZoomLevel();
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
-        //mapIntent.setPackage("com.google.android.apps.maps");
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom((position), 17.0f));
         mMap.setMyLocationEnabled(true);
         /** Called when the user clicks a marker. */
         mMap.setOnInfoWindowClickListener(this);
